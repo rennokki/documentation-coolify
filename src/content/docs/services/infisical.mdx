@@ -1,0 +1,46 @@
+---
+title: Infisical
+head:
+  - tag: "meta"
+    attrs:
+        property: "og:title"
+        content: "How to host Infisical with Coolify"
+description: "Here you can find the documentation for hosting Infisical with Coolify."
+---
+
+import { Badge } from '@astrojs/starlight/components';
+
+<Badge text="One-click setup." variant="note" size="large" />
+
+## What is Infisical?
+
+Infisical is the open source secret management platform that developers use to centralize their application configuration and secrets like API keys and database credentials as well as manage their internal PKI. Additionally, developers use Infisical to prevent secrets leaks to git and securely share secrets amongst engineers.
+
+## Why use Infisical?
+
+Infisical helps developers achieve secure centralized secret management and provides all the tools to easily manage secrets in various environments and infrastructure components. In particular, here are some of the most common points that developers mention after adopting Infisical:
+
+- Streamlined local development processes (switching .env files to Infisical CLI and removing secrets from developer machines).
+- Best-in-class developer experience with an easy-to-use Web Dashboard.
+- Simple secret management inside CI/CD pipelines and staging environments.
+- Secure and compliant secret management practices in production environments.
+- Facilitated workflows around secret change management, access requests, temporary access provisioning, and more.
+- Improved security posture thanks to secret scanning, granular access control policies, automated secret rotation, and dynamic secrets capabilities.
+
+## How does it work?
+
+To make secret management effortless and secure, Infisical follows a certain structure for enabling secret management workflows as defined below.
+
+Identities in Infisical are users or machine which have a certain set of roles and permissions assigned to them. Such identities are able to manage secrets in various Clients throughout the entire infrastructure. To do that, identities have to verify themselves through one of the available Authentication Methods.
+
+As a result, the 3 main concepts that are important to understand are:
+
+- Identities: users or machines with a set permissions assigned to them.
+- Clients: Infisical-developed tools for managing secrets in various infrastructure components (e.g., Kubernetes Operator, Infisical Agent, CLI, SDKs, API, Web Dashboard).
+- Authentication Methods: ways for Identities to authenticate inside different clients (e.g., SAML SSO for Web Dashboard, Universal Auth for Infisical Agent, AWS Auth etc.).
+
+## Links
+
+- [The official website ›](https://infisical.com/)
+- [Deploy with Docker ›](https://infisical.com/docs/integrations/platforms/docker-intro)
+- [GitHub ›](https://github.com/infisical/infisical)
